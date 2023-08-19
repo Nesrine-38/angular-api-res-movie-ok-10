@@ -1,0 +1,7 @@
+<article>
+  <h3>  <a routerLink="/movie/{{movie.id}}">
+    {{ movie.title }}</a></h3>
+  <p>{{movie.released|date}}</p>
+  <button (click)="deleteMovie()">Delete a movie</button>
+
+</article>

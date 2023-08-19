@@ -1,0 +1,6 @@
+<h1>Movie List</h1>
+
+
+<app-movieitem [movie]="item" (Deleted)="removeMovie($event)" *ngFor="let item of list"></app-movieitem>
+
+<app-formmovie (added)="toList($event)"></app-formmovie>

@@ -1,0 +1,19 @@
+
+<div *ngIf="movie">
+  <ng-container *ngIf="!editing">
+    <!-- pour afficher les données dans une section tt seule et le formulaire dans une partie -->
+    <button (click)="editing=true">Edit</button>
+  <h1>{{movie.title}}</h1>
+  <p>{{movie.released|date}}</p>
+  <p>{{movie.duration}}</p>
+  <p>{{movie.content}}</p>
+</ng-container>
+
+<app-formmovie *ngIf="editing" [movie]="movie" (added)="updateMovie($event)"></app-formmovie> <!--on appele le formulaire de la component form movie-->
+</div>
+
+
+<!-- If movie is not defined, show loading message -->
+<div *ngIf="!movie">
+  <p>Loding.....</p>
+</div>

@@ -1,0 +1,13 @@
+<form action="#" class="form">
+  <label for="site-search">Search the site:</label>
+  <input type="search"  placeholder="Start searching for a movie by title or content or released " name="search" rel="search"  [(ngModel)]="term" (keyup)="DoSearch(term)" autocomplete="on" >
+  <ul>
+    <li *ngFor="let item of result">
+      {{item.title}}
+
+    </li>
+  </ul>
+
+</form>
+<!-- keyup  ou input à chaque fois qu'on tape -->
+
